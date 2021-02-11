@@ -12,7 +12,7 @@ EXPOSE 80
 
 #create primitive wraper.sh
 RUN printf '#!/bin/sh\n' > /home/wraper.sh \
-&& printf 'echo "Run variable DEVOPS:$DEVOPS" > /var/www/index.html\n' >> /home/wraper.sh \
+&& printf 'echo "Run variable PASSWORD:$PASSWORD" > /var/www/index.html\n' >> /home/wraper.sh \
 && printf 'nginx -g "daemon off;"\n' >> /home/wraper.sh  \
 && chmod +x /home/wraper.sh
 
