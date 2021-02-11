@@ -6,8 +6,8 @@ RUN apk -U add nginx \
 #create config www
 && printf 'server\n {listen 80 default_server;\nroot /var/www;\n}\n' > /etc/nginx/http.d/default.conf
 
-ARG DEVOPS=$DEVOPS
-ENV DEVOPS=$DEVOPS
+ARG PASSWORD
+ENV PASSWORD=$PASSWORD
 EXPOSE 80
 
 #create primitive wraper.sh
